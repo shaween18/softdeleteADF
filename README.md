@@ -31,8 +31,5 @@ Steps for creation of watermark table:
 
 		END
 		
-Screenshots of the pipeline:
-
-1. Full Pipeline:
-
+Screenshots of the pipeline are provided in the Screenshots folder for each step of the pipeline (Lookup activity, Copy data Activity, and Stored procedure activity).
 
