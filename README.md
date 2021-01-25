@@ -2,6 +2,8 @@
  
 I have provided the templates for the pipeline. It includes the datasets, linked services, and pipeline. 
 
+The entire BackupContacts Pipeline can be found in the workplace_publish branch.
+
 Steps for creation of watermark table:
  
 1. Create a watermark table in SSMS:
