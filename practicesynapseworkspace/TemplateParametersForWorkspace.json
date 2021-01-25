@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "practicesynapseworkspace"
+		},
+		"BackupContactLS_connectionString": {
+			"value": ""
+		},
+		"SQLTableWatermarkLS_connectionString": {
+			"value": ""
+		},
+		"StoredContactsLS_connectionString": {
+			"value": ""
+		},
+		"practicesynapseworkspace-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"practicesynapseworkspace-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://practicestoragessb.dfs.core.windows.net"
+		}
+	}
+}
