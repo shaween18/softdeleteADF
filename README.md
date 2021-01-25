@@ -2,7 +2,7 @@
  
 I have provided the templates for the pipeline. It includes the datasets, linked services, and pipeline. 
 
-The entire BackupContacts Pipeline can be found in the workplace_publish branch.
+The entire BackupContacts Pipeline can be found in the pipeline folder. Please create the linked services and the integration datasets first.
 
 Steps for creation of watermark table:
  
