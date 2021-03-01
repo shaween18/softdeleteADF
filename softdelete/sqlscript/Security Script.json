@@ -1,5 +1,5 @@
 {
-	"name": "SQL script 1",
+	"name": "Security Script",
 	"properties": {
 		"content": {
 			"query": "CREATE SCHEMA [SchemaA]\nGO\nCREATE TABLE [SchemaA].[Employee]\n(\n    EmployeeKey INT,\n    EmployeeName VARCHAR(30),\n    EmployeeRole VARCHAR(20),\n    Salary INT\n);\nGO\n\nINSERT INTO [SchemaA].[Employee] (EmployeeKey, EmployeeName, EmployeeRole, Salary)\nVALUES (1, 'EmployeeA', 'Engineer', 100000);\nINSERT INTO [SchemaA].[Employee] (EmployeeKey, EmployeeName, EmployeeRole, Salary)\nVALUES (2, 'EmployeeB', 'Sales', 90000);\nINSERT INTO [SchemaA].[Employee] (EmployeeKey, EmployeeName, EmployeeRole, Salary)\nVALUES (3, 'EmployeeC', 'Manager', 200000);\n\n\nCREATE SCHEMA [SchemaB]\nGO\nCREATE VIEW [SchemaB].[ViewNoSalary]\nAS\nSELECT\na.EmployeeKey,\na.EmployeeName,\na.EmployeeRole\nFROM [SchemaA].[Employee] a;\n\nCREATE USER [sbahadur@microsoft.com] FROM EXTERNAL PROVIDER;\n\nGRANT SELECT ON OBJECT::[SchemaB].[ViewNoSalary] TO [sbahadur@microsoft.com]\nGO\n\nEXECUTE AS USER = 'sbahadur@microsoft.com';\nGO\nSELECT * FROM [SchemaB].[ViewNoSalary];\n\nEXECUTE AS USER = 'sbahadur@microsoft.com';\nGO\nSELECT * FROM [SchemaA].[Employee];\n",
